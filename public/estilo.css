@@ -1,0 +1,146 @@
+/* 🌴 Inspirado en las Islas Canarias 🌴 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0077b6, #00b4d8, #caf0f8);
+  color: #003049;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* ☀️ Logo con estilo tropical */
+.logo {
+  width: 230px;
+  margin: 40px auto 20px;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* 🌊 Encabezado principal */
+h1 {
+  font-size: 2.8rem;
+  margin: 0.5em 0 0.2em;
+  color: #fefae0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🏝️ Subtítulo */
+p {
+  font-size: 1.2rem;
+  color: #e0fbfc;
+  margin-bottom: 2em;
+}
+
+/* 🐚 Barra de navegación */
+nav {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 15px 0;
+  border-radius: 15px;
+  width: 85%;
+  margin: 0 auto 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+  color: #fff7d6;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 18px;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+  color: #ffe66d;
+  text-shadow: 0 0 10px #ffdd00;
+}
+
+/* 🌅 Contenedor principal */
+main {
+  background: rgba(255, 255, 255, 0.15);
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* 🏖️ Botones con colores canarios */
+button, input[type="submit"] {
+  background: linear-gradient(90deg, #ffd60a, #ffba08);
+  color: #003049;
+  font-weight: 700;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 214, 10, 0.6);
+}
+
+/* 🌺 Formularios */
+form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #fff;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #003049;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid #ffe66d;
+}
+
+/* 🌤️ Animación al entrar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body, .logo, h1, p, nav, main, form {
+  animation: fadeIn 1s ease;
+}
+
+/* 🌴 Footer */
+footer {
+  margin-top: 50px;
+  color: #fff7d6;
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}

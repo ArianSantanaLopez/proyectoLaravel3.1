@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Registrar Partido</title>
+    <link rel="stylesheet" href="{{ asset('estilo.css') }}">
+
 </head>
 <body>
     <h1>Registrar Partido</h1>
