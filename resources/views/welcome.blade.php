@@ -28,7 +28,11 @@
     </main>
 
     <footer>
-        <p>🌞 FutbolApp © 2025 El futbol de tu barrio</p>
+        <p>🌞 FutbolApp 2025 El futbol de tu barrio</p>
+        <a href="https://www.instagram.com/fflaspalmas/?hl=es" target="_blank" rel="noopener noreferrer">
+         Síguenos en nuestra cuenta de Instagram
+</a>
+
     </footer>
 </body>
 </html>

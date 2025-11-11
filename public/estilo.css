@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #0077b6, #00b4d8, #caf0f8);
-  color: #003049;
+  background: linear-gradient(180deg,blue, #00b4d8, lightblue);
+  color: darkblue;
   min-height: 100vh;
   text-align: center;
   overflow-x: hidden;

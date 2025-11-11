@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <title>Registrar Partido</title>
+    <title>Registrar Nuevo Partido</title>
     <link rel="stylesheet" href="{{ asset('estilo.css') }}">
 
 </head>
 <body>
-    <h1>Registrar Partido</h1>
+    <h1>Registrar  Nuevo Partido</h1>
     <a href="{{ route('home') }}">Inicio</a> |
     <a href="{{ route('partidos.index') }}">Ver Partidos</a>
 
