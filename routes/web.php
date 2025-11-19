@@ -29,3 +29,14 @@ Route::get('/test-mail', function () {
 
     return 'Correo enviado. Revisa tu bandeja en Mailtrap ✅';
 });
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/adminlte', function () {
+        return view('adminlte_welcome');
+    })->name('adminlte.welcome');
+
+    Route::get('/adminlte/form', function () {
+        return view('adminlte_form');
+    })->name('adminlte.form');
+
+});
