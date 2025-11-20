@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FutbolApp - Inicio</title>
     <link rel="stylesheet" href="{{ asset('estilo.css') }}">
-
 </head>
 
 <body>
@@ -18,21 +17,26 @@
     <nav>
         <a href="{{ route('partidos.create') }}">Registrar Partido</a>
         <a href="{{ route('partidos.index') }}">Ver Partidos</a>
+
+        <a href="{{ route('login') }}">{{ __('Login') }}</a>
+        <a href="{{ route('register') }}">{{ __('Register') }}</a>
     </nav>
 
     <main>
         <section>
             <h2>⚽ Tu centro del fútbol amateur</h2>
-            <p>FutbolApp te permite registrar, gestionar y seguir los partidos locales en tiempo real. Vive el espíritu GranCanario del deporte desde cualquier lugar.</p>
+            <p>
+                FutbolApp te permite registrar, gestionar y seguir los partidos locales en tiempo real.
+                Vive el espíritu GranCanario del deporte desde cualquier lugar.
+            </p>
         </section>
     </main>
 
     <footer>
         <p>🌞 FutbolApp 2025 El futbol de tu barrio</p>
         <a href="https://www.instagram.com/fflaspalmas/?hl=es" target="_blank" rel="noopener noreferrer">
-         Síguenos en nuestra cuenta de Instagram
-</a>
-
+            Síguenos en nuestra cuenta de Instagram
+        </a>
     </footer>
 </body>
 </html>
