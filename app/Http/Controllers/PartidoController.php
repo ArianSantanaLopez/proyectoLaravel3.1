@@ -32,7 +32,7 @@ class PartidoController extends Controller
             'ubicacion' => 'nullable|string|max:255',
             'notas' => 'nullable|string|max:500',
         ]);
-
+        // Partido::create($validated); crea un nuevo partido en la base de datos usando los datos validados del formulario. Solo guarda los campos que he indicado como $fillable para evitar asignaciones masivas no seguras.
         // Guardar en base de datos
         Partido::create($validated);
 
