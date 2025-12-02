@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PartidoController;
+use App\Http\Controllers\Admin\UserController;
 
 Route::get('/', function () {
     return view('welcome'); // aquí va tu vista personalizada
@@ -39,4 +40,31 @@ Route::middleware(['auth'])->group(function () {
         return view('adminlte_form');
     })->name('adminlte.form');
 
-});
+    });
+
+    Route::middleware(['auth'])
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+
+        // LISTAR
+        Route::get('/users', [UserController::class, 'index'])->name('users.index');
+
+        // MOSTRAR DETALLE
+        Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
+
+        // FORMULARIO CREACIÓN
+        Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
+
+        // GUARDAR NUEVO
+        Route::post('/users', [UserController::class, 'store'])->name('users.store');
+
+        // FORMULARIO EDICIÓN
+        Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+
+        // ACTUALIZAR
+        Route::put('/users/{id}/edit', [UserController::class, 'update'])->name('users.update');
+
+        // ELIMINAR
+        Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+    });

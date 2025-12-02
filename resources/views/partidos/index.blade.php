@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Listado de Partidos</title>
+    <link rel="stylesheet" href="{{ asset('estilo.css') }}">
 </head>
 <body>
     <h1>Partidos registrados</h1>
