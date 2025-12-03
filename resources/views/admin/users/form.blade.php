@@ -20,3 +20,16 @@
     <label>Confirmar contraseña</label>
     <input type="password" name="password_confirmation" class="form-control">
 </div>
+<div class="form-group">
+    <label>Teléfono</label>
+    <input type="text" name="telefono" class="form-control"
+           value="{{ old('telefono', $user->telefono ?? '') }}">
+</div>
+
+<div class="form-group">
+    <label>Rol</label>
+    <select name="rol" class="form-control">
+        <option value="usuario" {{ old('rol', $user->rol ?? '') == 'usuario' ? 'selected' : '' }}>Usuario</option>
+        <option value="admin" {{ old('rol', $user->rol ?? '') == 'admin' ? 'selected' : '' }}>Administrador</option>
+    </select>
+</div>

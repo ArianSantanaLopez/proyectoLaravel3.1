@@ -12,7 +12,7 @@ class UserController extends Controller
     // LISTADO DE USUARIOS
     public function index()
     {
-        $users = User::orderBy('created_at', 'desc')->paginate(10);
+        $users = User::paginate(10); // antes era User::all()
         return view('admin.users.index', compact('users'));
     }
 
@@ -35,6 +35,8 @@ class UserController extends Controller
         $data = $request->validate([
             'name'     => 'required|string|max:255',
             'email'    => 'required|email|unique:users,email',
+            'telefono' => 'nullable|string',
+            'rol'      => 'required|string',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
@@ -65,6 +67,8 @@ class UserController extends Controller
                 'email',
                 Rule::unique('users')->ignore($user->id)
             ],
+            'telefono' => 'nullable|string',
+            'rol'      => 'required|string',
             'password' => 'nullable|string|min:8|confirmed',
         ]);
 
@@ -75,6 +79,8 @@ class UserController extends Controller
 
         $user->name  = $data['name'];
         $user->email = $data['email'];
+        $user->telefono = $data['telefono'];
+        $user->rol = $data['rol'];
 
         $user->save();
 

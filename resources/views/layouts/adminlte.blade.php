@@ -29,6 +29,19 @@
         <div class="sidebar">
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column">
+                    <li class="nav-item">
+                        <a href="{{ route('admin.users.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                                <p>Gestión de usuarios</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('admin.users.create') }}" class="nav-link">
+                            <i class="nav-icon fas fa-user-plus"></i>
+                                <p>Nuevo usuario</p>
+                        </a>
+                    </li>
                     @auth
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('adminlte.welcome') }}">

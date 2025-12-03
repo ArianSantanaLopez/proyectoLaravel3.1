@@ -21,6 +21,8 @@
                         <th>Correo</th>
                         <th>Creado</th>
                         <th>Acciones</th>
+                        <th>Teléfono</th>
+                        <th>Rol</th>
                     </tr>
                 </thead>
 
@@ -34,6 +36,8 @@
                         </td>
                         <td>{{ $u->email }}</td>
                         <td>{{ $u->created_at->format('Y-m-d') }}</td>
+                        <td>{{ $u->telefono }}</td>
+                        <td>{{ $u->rol }}</td>
                         <td>
                             <a href="{{ route('admin.users.edit', $u->id) }}" class="btn btn-warning btn-sm">
                                 Editar
@@ -58,8 +62,8 @@
         </div>
     </div>
 
-    <div class="mt-3">
-        {{ $users->links() }}
+    <div class="d-flex justify-content-center mt-3">
+    {{ $users->links() }}
     </div>
 
 </div>
