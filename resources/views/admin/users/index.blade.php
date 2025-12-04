@@ -20,9 +20,9 @@
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Creado</th>
-                        <th>Acciones</th>
                         <th>Teléfono</th>
                         <th>Rol</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
 
